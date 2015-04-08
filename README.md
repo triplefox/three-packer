@@ -3,7 +3,9 @@ three-packer
 * What This Is For
 
 Packing source art assets into efficient atlases
+
 Repositioning existing source assets into different forms
+
 Creating and manipulating metadata for assets
 
 There are three .nim files that make up the core of the library, which make progressively more assumptions. There is an additional file for saving BMP.
@@ -11,8 +13,11 @@ There are three .nim files that make up the core of the library, which make prog
 * What's In It
 
 pack.nim contains the core data structures and the packing algorithms.
+
 packsdl.nim contains loading, display, and rectangle cropping for assets using SDL, and a "sheet bundle" structure that synchronizes the SDL texture data and the atlas data.
+
 packsdleasy.nim contains convenience functions for working with the SDL data in common situations, including tiling, packing, and JSON serialized atlas data.
+
 bmpsdl.nim contains a serializer for BMP32 using SDL surfaces.
 
 Right now the library is only really tested with BMP32 BGRA assets. sdl_image allows loading additional formats, however only the BMP serializer is known to work for saving.
